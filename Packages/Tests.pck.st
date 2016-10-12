@@ -1,12 +1,12 @@
-'From Cuis 4.2 of 25 July 2013 [latest update: #2942] on 19 September 2016 at 10:18:11 am'!
+'From Cuis 4.2 of 25 July 2013 [latest update: #2954] on 12 October 2016 at 2:01:10 am'!
 'Description Please enter a description for this package '!
-!provides: 'Tests' 1 63!
-!requires: 'Taskbar' 1 nil nil!
+!provides: 'Tests' 1 64!
 !requires: 'Compression' 1 nil nil!
-!requires: 'Morphic-Widgets-Extras' 1 nil nil!
-!requires: 'SignalProcessing' 1 nil nil!
 !requires: 'Collections-CompactArrays' 1 nil nil!
 !requires: 'Graphics-Files-Additional' 1 nil nil!
+!requires: 'Taskbar' 1 nil nil!
+!requires: 'Morphic-Widgets-Extras' 1 nil nil!
+!requires: 'SignalProcessing' 1 nil nil!
 !classDefinition: #MyResumableTestError category: #'Tests-Exceptions'!
 Error subclass: #MyResumableTestError
 	instanceVariableNames: ''
@@ -6260,12 +6260,12 @@ unusedVariableSource
 		| goo |
 		^ nil'! !
 
-!ContextCompilationTest methodsFor: 'tests' stamp: 'eem 6/19/2008 10:11'!
+!ContextCompilationTest methodsFor: 'tests' stamp: 'SH 10/12/2016 02:00:35'!
 testVariablesAndOffsetsDo
 
 	"ContextCompilationTest new testVariablesAndOffsetsDo"
 	| contextClasses |
-	contextClasses := ContextPart withAllSuperclasses, ContextPart allSubclasses asArray.
+	contextClasses := ContextPart withAllSuperclasses, ContextPart allSubclasses asArray, Context withAllSubclasses asArray.
 	contextClasses do:
 		[:class|
 		class variablesAndOffsetsDo:
