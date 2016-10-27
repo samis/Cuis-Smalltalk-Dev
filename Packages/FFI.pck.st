@@ -1,6 +1,6 @@
-'From Cuis 4.2 of 25 July 2013 [latest update: #2933] on 6 September 2016 at 10:15:46 am'!
+'From Cuis 4.2 of 25 July 2013 [latest update: #2960] on 27 October 2016 at 11:59:21 pm'!
 'Description Please enter a description for this package.'!
-!provides: 'FFI' 1 15!
+!provides: 'FFI' 1 16!
 !classDefinition: #FFIConstants category: #'FFI-Pools'!
 SharedPool subclass: #FFIConstants
 	instanceVariableNames: ''
@@ -887,11 +887,11 @@ printOn: aStream
 	].
 	aStream nextPut:$>! !
 
-!ExternalFunction methodsFor: 'invoking' stamp: 'ar 8/2/2009 10:49'!
+!ExternalFunction methodsFor: 'invoking' stamp: 'SH 10/27/2016 23:53:04'!
 tryInvokeWithArguments: argArray
 	"Sent from the debugger to simulate an FFI call."
 	<primitive: 'primitiveCalloutWithArgs' module:'SqueakFFIPrims'>
-	^ContextPart primitiveFailToken! !
+	^Context primitiveFailToken! !
 
 !ExternalFunction class methodsFor: 'compiler support' stamp: 'ar 12/2/1999 16:20'!
 atomicTypeNamed: aString

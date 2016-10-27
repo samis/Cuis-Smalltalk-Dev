@@ -1,7 +1,7 @@
-'From Cuis 4.2 of 25 July 2013 [latest update: #2923] on 6 September 2016 at 10:27:49 am'!
+'From Cuis 4.2 of 25 July 2013 [latest update: #2960] on 27 October 2016 at 11:59:41 pm'!
 'Description Various code used in Squeak which is not in Cuis.'!
-!provides: 'SqueakCompatibility' 1 26!
-!requires: 'Cuis-Base' 42 2658 nil!
+!provides: 'SqueakCompatibility' 1 27!
+!requires: 'Cuis-Base' 42 2961 nil!
 !classDefinition: #KlattResonatorIndices category: #SqueakCompatibility!
 SharedPool subclass: #KlattResonatorIndices
 	instanceVariableNames: ''
