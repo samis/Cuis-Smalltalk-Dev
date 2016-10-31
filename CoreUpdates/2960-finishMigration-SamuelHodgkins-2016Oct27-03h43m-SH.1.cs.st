@@ -1555,15 +1555,15 @@ valueIndex
 	^ ValueIndex! !
 
 
-!Utilities class methodsFor: 'miscellaneous' stamp: 'SH 10/27/2016 04:06:32'!
+!Utilities class methodsFor: 'miscellaneous' stamp: 'SH 10/31/2016 03:15:32'!
 performContextMigration
-| contextObj |
-contextObj := Context.
-ContextPart instVarNamed: #instanceVariables put: #( ).
-contextObj instVarNamed: #instanceVariables put: #(stackp method closureOrNil receiver).
-contextObj superclass: InstructionStream.
-contextObj classPool: ContextPart classPool.
-ContextPart removeFromSystem.! !
+	ContextPart instVarNamed: #instanceVariables put: #( ).
+	Context instVarNamed: #instanceVariables put: #(stackp method closureOrNil receiver).
+	Context superclass: InstructionStream.
+	Context class superclass: InstructionStream class.
+	Context classPool: ContextPart classPool.
+	InstructionStream addSubclass: Context.
+	ContextPart removeFromSystem.! !
 
 
 !Debugger class methodsFor: 'instance creation' stamp: 'SH 10/27/2016 04:08:02'!
